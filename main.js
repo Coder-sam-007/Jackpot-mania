@@ -33,8 +33,9 @@ const randomEmoji = () => {
 
 const my_confetti = () => {
   const default_confetti = {
-    particleCount: 100,
-    spread: 70,
+    particleCount: 140,
+    spread: 120,
+    ticks: 90,
   };
   confetti({
     ...default_confetti,
