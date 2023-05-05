@@ -35,8 +35,6 @@ const my_confetti = () => {
   const default_confetti = {
     particleCount: 100,
     spread: 70,
-    decay: 0.9,
-    ticks: 70,
   };
   confetti({
     ...default_confetti,
