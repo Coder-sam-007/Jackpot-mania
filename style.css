@@ -1,0 +1,91 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: aliceblue;
+  background-color: rgba(0, 1, 30, 0.88);
+}
+
+header {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+h1 {
+  color: transparent;
+  background: linear-gradient(45deg, rgb(156 255 233), rgb(203 78 255));
+  font-size: clamp(2rem, 1.1765rem + 3.7647vw, 4rem);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.container {
+  width: min(32rem, 100% - 2rem);
+  margin: 0 auto;
+}
+
+.numbox {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color: #313152;
+  margin-block: 1rem;
+  border-radius: 0.5rem;
+}
+
+.numcell {
+  padding: 1rem;
+  font-size: 4rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  background: #53537e;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(45deg, rgb(156 255 233), rgb(203 78 255));
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.results {
+  padding: 1rem;
+  margin: 1rem auto 2rem;
+  background: #313152;
+  border-radius: 0.5rem;
+}
+
+.results h2,
+.results p {
+  display: inline;
+  font-size: 1.5rem;
+}
+
+/* Media queries */
+
+@media (max-width: 500px) {
+  .numcell {
+    margin: 1rem 0.5rem;
+    padding: 1rem 0.2rem;
+  }
+
+  .btn {
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+  }
+}
