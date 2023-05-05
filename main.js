@@ -31,11 +31,31 @@ const randomEmoji = () => {
   return arr[Math.ceil(Math.random() * arr.length - 1)];
 };
 
+const my_confetti = () => {
+  const default_confetti = {
+    particleCount: 100,
+    spread: 70,
+    decay: 0.9,
+    ticks: 70,
+  };
+  confetti({
+    ...default_confetti,
+    angle: 45,
+    origin: { y: 1, x: 0 },
+  });
+  confetti({
+    ...default_confetti,
+    angle: 135,
+    origin: { y: 1, x: 1 },
+  });
+};
+
 const gen_emojis = () => [randomEmoji(), randomEmoji(), randomEmoji()];
 
 const matching_emojis = (...nums) => {
   switch (new Set(nums).size) {
     case 1:
+      my_confetti();
       return 1;
 
     case 2:
@@ -63,7 +83,7 @@ const run_the_machine = () => {
 const give_me_jackpot = () => {
   reset();
   let jackpot_hit = [];
-  score.textContent = "Not available in jackpot mode";
+  score.textContent = "Unavailable in jackpot mode";
 
   while (!(jackpot_hit[0] == 1) && moves < 101) {
     jackpot_hit = run_the_machine();
