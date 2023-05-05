@@ -10,6 +10,9 @@ const move = document.querySelector("#moves");
 const score = document.querySelector("#score");
 const statement = document.querySelector("#statement");
 
+const playSound = document.querySelector("#play-sound");
+const jackpotSound = document.querySelector("#jackpot-sound");
+
 let scores = 0;
 let moves = 0;
 
@@ -47,6 +50,7 @@ const my_confetti = () => {
     angle: 135,
     origin: { y: 1, x: 1 },
   });
+  jackpotSound.play();
 };
 
 const gen_emojis = () => [randomEmoji(), randomEmoji(), randomEmoji()];
@@ -98,6 +102,7 @@ const give_me_jackpot = () => {
 
 const play = () => {
   let result = run_the_machine();
+  playSound.play();
 
   switch (result[0]) {
     case 1:
